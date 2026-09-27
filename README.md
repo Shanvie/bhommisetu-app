@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BhoomiSetu AI
+
+BhoomiSetu AI is a government-grade platform for intelligent land record digitization, automated OCR extraction, cadastral spatial validation, human-in-the-loop verification, and GIS analytics. Built for the Smart India Hackathon (SIH).
+
+## Live Workflows & Functionality
+
+1. **Role-Based Access Control (RBAC)**:
+   - Super Admin, Government Officer, Verification Officer, Data Entry Operator, and Citizen personas.
+   - 1-Click quick login switcher on the Login page and in the top application header for instant evaluator testing.
+   - Dedicated session cookie management and `/api/auth/me` profile integration.
+
+2. **Ingestion & OCR Pipeline (`/documents/upload`)**:
+   - Supports drag-and-drop file upload for PDF, scanned JPG, JPEG, and PNG.
+   - 1-Click demo preset fillers for sample 7/12 Extracts (Pune), Property Cards (Nagpur), and Sale Deeds (Nashik).
+   - Multi-step live visual processing simulation (Accepted -> Preprocessing & Dewarping -> AI Field Extraction -> Cadastral Validation).
+   - Automatically synchronizes with land records registry, generates spatial coordinates, and routes to verification.
+
+3. **Interactive Human-in-the-Loop Verification Workspace (`/verification`)**:
+   - Verification queue selector allowing officers to step through pending records.
+   - High-contrast OCR toggle and scanned document viewer.
+   - Inline editable fields (Owner name, Survey number, Gat number, Plot area, Village, District) with per-field confidence ratings.
+   - Per-field "Accept (✓)" and "Flag (✕)" toggles.
+   - Decision console: "Approve & Mark Verified", "Flag Inconsistency (Request Review)", and "Reject Record".
+   - Commits changes immediately to the persistent store and writes an immutable audit log entry.
+
+4. **Official Cadastral Land Record Certificate (`/land-records/[id]`)**:
+   - Full Record of Rights (RoR) Certificate format.
+   - Property summary (Property ID, Survey No, Gat No, Mutation No, Document No).
+   - Ownership & Title breakdown with co-holders and relationship details.
+   - Area metric conversions (Sq. Meters & Acres).
+   - Cadastral validation diagnostics with severity ratings.
+   - Embedded GIS coordinate markers and print-ready layout.
+
+5. **GIS Cadastral Map Module (`/map`)**:
+   - Interactive Leaflet OpenStreetMap canvas.
+   - Custom colored status markers (Verified = Green, In Review = Cyan, Pending = Amber, Issues = Red).
+   - Filter by district, status, or search query.
+   - Parcel list sidebar with 1-click map centering and rich parcel popups with direct links to view or verify.
+
+6. **Global Search Engine (`/search`)**:
+   - Real-time instant filtering across Owner Name, Survey/Gat Number, Village, District, Status, and Land Type.
+   - 1-Click CSV export of search results.
+
+7. **Compliance & Audit Center (`/audit-logs` & `/reports`)**:
+   - Chronological audit trail tracking all uploads, verification decisions, and administrative actions.
+   - Working CSV downloads for:
+     - Officer Verification Compliance Report
+     - Master Land Records Register
+     - Validation Inconsistencies & Discrepancies
+     - District Revenue Analytics
+   - System settings configuration (`/settings`) with customizable area thresholds and 1-click demo baseline reset.
+
+8. **Notifications Center (`/notifications`)**:
+   - Real-time alerts for incoming documents, queue updates, and validation errors.
+   - "Mark as Read", "Mark All as Read", and "Clear All" with persistent store integration.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Run Vitest test suite
+npm test
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Demo Credentials (Password for all: `Password@123`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Verification Officer**: `verification.officer@bhoomisetu.gov.in`
+- **Government Officer**: `government.officer@bhoomisetu.gov.in`
+- **Super Administrator**: `super.admin@bhoomisetu.gov.in`
+- **Data Entry Operator**: `data.entry@bhoomisetu.gov.in`
+- **Citizen User**: `citizen@example.com`

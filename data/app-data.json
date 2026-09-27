@@ -1,0 +1,514 @@
+{
+  "users": [
+    {
+      "id": "usr-1001",
+      "name": "Aarav Nair",
+      "email": "super.admin@bhoomisetu.gov.in",
+      "role": "SUPER_ADMIN",
+      "department": "State IT Cell",
+      "isActive": true,
+      "permissions": [
+        "MANAGE_USERS",
+        "MANAGE_DEPARTMENTS",
+        "VIEW_ANALYTICS",
+        "VIEW_AUDIT_LOGS",
+        "CONFIGURE_VALIDATION_RULES",
+        "MANAGE_DOCUMENT_TYPES"
+      ],
+      "lastLogin": "2026-09-26T08:15:00.000Z"
+    },
+    {
+      "id": "usr-1002",
+      "name": "Meera Patil",
+      "email": "government.officer@bhoomisetu.gov.in",
+      "role": "GOVERNMENT_OFFICER",
+      "department": "Revenue Department",
+      "isActive": true,
+      "permissions": [
+        "VIEW_ASSIGNED_RECORDS",
+        "APPROVE_RECORDS",
+        "VIEW_ANALYTICS",
+        "GENERATE_REPORTS"
+      ],
+      "lastLogin": "2026-09-26T07:40:00.000Z"
+    },
+    {
+      "id": "usr-1003",
+      "name": "Aniket Kulkarni",
+      "email": "verification.officer@bhoomisetu.gov.in",
+      "role": "VERIFICATION_OFFICER",
+      "department": "Land Verification Cell",
+      "isActive": true,
+      "permissions": [
+        "REVIEW_EXTRACTIONS",
+        "APPROVE_VERIFICATION",
+        "FLAG_INCONSISTENCIES"
+      ],
+      "lastLogin": "2026-09-26T06:50:00.000Z"
+    },
+    {
+      "id": "usr-1004",
+      "name": "Sakshi Sharma",
+      "email": "data.entry@bhoomisetu.gov.in",
+      "role": "DATA_ENTRY_OPERATOR",
+      "department": "District Record Desk",
+      "isActive": true,
+      "permissions": [
+        "UPLOAD_DOCUMENTS",
+        "ENTER_METADATA",
+        "CORRECT_OCR",
+        "SUBMIT_RECORDS"
+      ],
+      "lastLogin": "2026-09-26T05:30:00.000Z"
+    },
+    {
+      "id": "usr-1005",
+      "name": "Public User",
+      "email": "citizen@example.com",
+      "role": "CITIZEN",
+      "department": "Public Access",
+      "isActive": true,
+      "permissions": [
+        "VIEW_PUBLIC_RECORDS",
+        "VIEW_APPLICATION_STATUS"
+      ],
+      "lastLogin": "2026-09-26T04:45:00.000Z"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-1790428817938",
+      "title": "7/12 Extract - Demo Submission",
+      "documentType": "7/12 Extract",
+      "fileName": "shivajinagar-712.pdf",
+      "mimeType": "application/pdf",
+      "size": 2250000,
+      "uploadedBy": "usr-1004",
+      "uploadedAt": "2026-09-26T13:20:17.938Z",
+      "status": "PROCESSING",
+      "verificationStatus": "PENDING",
+      "metadata": {
+        "state": "Maharashtra",
+        "district": "Pune",
+        "taluka": "Pune City",
+        "village": "Shivajinagar"
+      },
+      "rawText": "OCR processing in progress.",
+      "confidence": 0.82,
+      "pageCount": 2,
+      "recordId": "land-1790428817938"
+    },
+    {
+      "id": "doc-1001",
+      "title": "7/12 Extract - Shivajinagar",
+      "documentType": "7/12 Extract",
+      "fileName": "shivajinagar-712.pdf",
+      "mimeType": "application/pdf",
+      "size": 2250000,
+      "uploadedBy": "usr-1004",
+      "uploadedAt": "2026-09-24T10:20:00.000Z",
+      "status": "VALIDATED",
+      "verificationStatus": "IN_REVIEW",
+      "metadata": {
+        "state": "Maharashtra",
+        "district": "Pune",
+        "taluka": "Pune City",
+        "village": "Shivajinagar"
+      },
+      "rawText": "Survey Number 123/4A, Owner Rahul Sharma, Area 1450 sq. mt.",
+      "confidence": 0.92,
+      "pageCount": 2,
+      "recordId": "land-1001"
+    },
+    {
+      "id": "doc-1002",
+      "title": "Property Card - Kharadi",
+      "documentType": "Property Card",
+      "fileName": "kharadi-property-card.jpg",
+      "mimeType": "image/jpeg",
+      "size": 1800000,
+      "uploadedBy": "usr-1004",
+      "uploadedAt": "2026-09-23T09:30:00.000Z",
+      "status": "VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "metadata": {
+        "state": "Maharashtra",
+        "district": "Pune",
+        "taluka": "Haveli",
+        "village": "Kharadi"
+      },
+      "rawText": "Property registered to Ramesh Patil, survey 745/B.",
+      "confidence": 0.95,
+      "pageCount": 1,
+      "recordId": "land-1002"
+    },
+    {
+      "id": "doc-1003",
+      "title": "Sale Deed - Nashik",
+      "documentType": "Sale Deed",
+      "fileName": "nashik-sale-deed.png",
+      "mimeType": "image/png",
+      "size": 2200000,
+      "uploadedBy": "usr-1004",
+      "uploadedAt": "2026-09-20T14:10:00.000Z",
+      "status": "PROCESSING",
+      "verificationStatus": "PENDING",
+      "metadata": {
+        "state": "Maharashtra",
+        "district": "Nashik",
+        "taluka": "Nashik",
+        "village": "Makhmalabad"
+      },
+      "rawText": "Pending OCR execution.",
+      "confidence": 0.62,
+      "pageCount": 3,
+      "recordId": "land-1003"
+    }
+  ],
+  "landRecords": [
+    {
+      "id": "land-test-999",
+      "propertyId": "MH-TEST-999",
+      "surveyNumber": "99/1",
+      "gatNumber": "GAT-99",
+      "ownerName": "Test Owner",
+      "coOwnerNames": [],
+      "fatherName": "Test Father",
+      "village": "Test Village",
+      "taluka": "Test Taluka",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "area": 1200,
+      "landType": "Agricultural",
+      "landUse": "Cultivable",
+      "ownershipType": "Individual",
+      "mutationNumber": "MUT-999",
+      "documentNumber": "DOC-999",
+      "registrationDate": "2026-01-01",
+      "lastUpdated": "2026-09-26T16:57:33.658Z",
+      "address": "Test Address",
+      "latitude": 18.5,
+      "longitude": 73.8,
+      "verificationStatus": "VERIFIED",
+      "documentType": "7/12 Extract",
+      "extractedFields": [],
+      "validationResults": [],
+      "comment": "Decision: VERIFIED by Verification Officer",
+      "comments": [
+        "[Aniket Kulkarni]: Decision: VERIFIED by Verification Officer"
+      ]
+    },
+    {
+      "id": "land-1001",
+      "propertyId": "BR-23014",
+      "surveyNumber": "123/4A",
+      "gatNumber": "GAT-22/98",
+      "ownerName": "Rahul Sharma",
+      "coOwnerNames": [
+        "Neha Sharma"
+      ],
+      "fatherName": "Rakesh Sharma",
+      "village": "Shivajinagar",
+      "taluka": "Pune City",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "area": 1450,
+      "landType": "Agricultural",
+      "landUse": "Cultivable",
+      "ownershipType": "Individual",
+      "mutationNumber": "MUT-1402",
+      "documentNumber": "DOC-712-4401",
+      "registrationDate": "2021-06-10",
+      "lastUpdated": "2026-09-26T08:12:00.000Z",
+      "address": "Shivajinagar, Pune",
+      "latitude": 18.5314,
+      "longitude": 73.8475,
+      "verificationStatus": "IN_REVIEW",
+      "documentType": "7/12 Extract",
+      "extractedFields": [
+        {
+          "field": "Owner Name",
+          "value": "Rahul Sharma",
+          "confidence": 0.94,
+          "source_page": 1,
+          "status": "verified"
+        },
+        {
+          "field": "Survey Number",
+          "value": "123/4A",
+          "confidence": 0.85,
+          "source_page": 1,
+          "status": "review"
+        },
+        {
+          "field": "Village",
+          "value": "Shivajinagar",
+          "confidence": 0.96,
+          "source_page": 1,
+          "status": "verified"
+        },
+        {
+          "field": "District",
+          "value": "Pune",
+          "confidence": 0.93,
+          "source_page": 1,
+          "status": "verified"
+        },
+        {
+          "field": "Area",
+          "value": "1450",
+          "confidence": 0.78,
+          "source_page": 2,
+          "status": "review"
+        }
+      ],
+      "validationResults": [
+        {
+          "ruleId": "RULE-OWNER-NAME",
+          "field": "Owner Name",
+          "severity": "MEDIUM",
+          "description": "Potential owner name inconsistency detected by comparison with previous record.",
+          "expectedValue": "Rahul Sharma",
+          "detectedValue": "Rahil Sharma",
+          "status": "WARN"
+        },
+        {
+          "ruleId": "RULE-AREA-MISMATCH",
+          "field": "Area",
+          "severity": "LOW",
+          "description": "Area difference within tolerance band.",
+          "expectedValue": "1500 sq mt",
+          "detectedValue": "1450 sq mt",
+          "status": "WARN"
+        }
+      ],
+      "comments": [
+        "Potential inconsistency detected in owner name; officer review required."
+      ]
+    },
+    {
+      "id": "land-1002",
+      "propertyId": "MH-PN-308",
+      "surveyNumber": "745/B",
+      "gatNumber": "GAT-12/40",
+      "ownerName": "Ramesh Patil",
+      "coOwnerNames": [],
+      "fatherName": "Dhondiram Patil",
+      "village": "Kharadi",
+      "taluka": "Haveli",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "area": 2100,
+      "landType": "Residential",
+      "landUse": "Built-up",
+      "ownershipType": "Individual",
+      "mutationNumber": "MUT-1010",
+      "documentNumber": "DOC-PR-147",
+      "registrationDate": "2019-02-14",
+      "lastUpdated": "2026-09-25T16:00:00.000Z",
+      "address": "Kharadi, Pune",
+      "latitude": 18.5522,
+      "longitude": 73.9285,
+      "verificationStatus": "VERIFIED",
+      "documentType": "Property Card",
+      "extractedFields": [
+        {
+          "field": "Owner Name",
+          "value": "Ramesh Patil",
+          "confidence": 0.97,
+          "source_page": 1,
+          "status": "verified"
+        },
+        {
+          "field": "Survey Number",
+          "value": "745/B",
+          "confidence": 0.92,
+          "source_page": 1,
+          "status": "verified"
+        },
+        {
+          "field": "District",
+          "value": "Pune",
+          "confidence": 0.98,
+          "source_page": 1,
+          "status": "verified"
+        }
+      ],
+      "validationResults": [],
+      "comments": [
+        "No issues found after verification."
+      ]
+    },
+    {
+      "id": "land-1003",
+      "propertyId": "MH-NS-019",
+      "surveyNumber": "331/9",
+      "gatNumber": "GAT-44/11",
+      "ownerName": "Priya Joshi",
+      "coOwnerNames": [
+        "Vikram Joshi"
+      ],
+      "fatherName": "Narayan Joshi",
+      "village": "Makhmalabad",
+      "taluka": "Nashik",
+      "district": "Nashik",
+      "state": "Maharashtra",
+      "area": 950,
+      "landType": "Agricultural",
+      "landUse": "Cultivable",
+      "ownershipType": "Joint",
+      "mutationNumber": "MUT-1560",
+      "documentNumber": "DOC-SD-9901",
+      "registrationDate": "2022-11-22",
+      "lastUpdated": "2026-09-20T11:00:00.000Z",
+      "address": "Makhmalabad, Nashik",
+      "latitude": 20.0012,
+      "longitude": 73.7869,
+      "verificationStatus": "PENDING",
+      "documentType": "Sale Deed",
+      "extractedFields": [
+        {
+          "field": "Owner Name",
+          "value": "Priya Joshi",
+          "confidence": 0.88,
+          "source_page": 1,
+          "status": "review"
+        },
+        {
+          "field": "Survey Number",
+          "value": null,
+          "confidence": 0,
+          "source_page": 1,
+          "status": "missing"
+        },
+        {
+          "field": "Village",
+          "value": "Makhmalabad",
+          "confidence": 0.9,
+          "source_page": 1,
+          "status": "verified"
+        }
+      ],
+      "validationResults": [
+        {
+          "ruleId": "RULE-MISSING-FIELD",
+          "field": "Survey Number",
+          "severity": "HIGH",
+          "description": "Required field missing from extraction output.",
+          "expectedValue": "Survey number must be present.",
+          "detectedValue": "null",
+          "status": "FAIL"
+        }
+      ],
+      "comments": [
+        "Awaiting reprocessing of survey number field."
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "id": "ntf-test-999",
+      "title": "Test Alert",
+      "message": "This is a test notification",
+      "type": "INFO",
+      "read": true,
+      "createdAt": "2026-09-26T13:41:25.706Z"
+    },
+    {
+      "id": "ntf-test-999",
+      "title": "Test Alert",
+      "message": "This is a test notification",
+      "type": "INFO",
+      "read": true,
+      "createdAt": "2026-09-26T13:41:03.440Z"
+    },
+    {
+      "id": "ntf-test-999",
+      "title": "Test Alert",
+      "message": "This is a test notification",
+      "type": "INFO",
+      "read": true,
+      "createdAt": "2026-09-26T13:38:34.621Z"
+    },
+    {
+      "id": "ntf-001",
+      "title": "Verification required",
+      "message": "Property record BR-23014 has pending verification review.",
+      "type": "WARNING",
+      "read": true,
+      "createdAt": "2026-09-26T08:00:00.000Z"
+    },
+    {
+      "id": "ntf-002",
+      "title": "Document processed",
+      "message": "New upload from Pune district has completed OCR and extraction.",
+      "type": "SUCCESS",
+      "read": true,
+      "createdAt": "2026-09-25T14:00:00.000Z"
+    },
+    {
+      "id": "ntf-003",
+      "title": "Validation error",
+      "message": "Duplicate survey number flagged in record GJ-4421.",
+      "type": "ERROR",
+      "read": true,
+      "createdAt": "2026-09-25T16:30:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit-1790441853660",
+      "userId": "usr-1003",
+      "userName": "Aniket Kulkarni",
+      "action": "RECORD_UPDATED",
+      "recordId": "land-test-999",
+      "timestamp": "2026-09-26T16:57:33.660Z",
+      "ipAddress": "127.0.0.1",
+      "device": "Web Browser",
+      "newValue": "Status: VERIFIED, Notes: Decision: VERIFIED by Verification Officer"
+    },
+    {
+      "id": "audit-1790428817939",
+      "userId": "usr-1004",
+      "userName": "Sakshi Sharma",
+      "action": "DOCUMENT_UPLOADED",
+      "recordId": "doc-1790428817938",
+      "timestamp": "2026-09-26T13:20:17.939Z",
+      "ipAddress": "10.0.0.12",
+      "device": "Demo client"
+    },
+    {
+      "id": "audit-001",
+      "userId": "usr-1003",
+      "userName": "Aniket Kulkarni",
+      "action": "LOGIN",
+      "timestamp": "2026-09-26T13:20:17.928Z",
+      "ipAddress": "10.0.0.4",
+      "device": "Chrome on Windows"
+    },
+    {
+      "id": "audit-002",
+      "userId": "usr-1004",
+      "userName": "Sakshi Sharma",
+      "action": "DOCUMENT_UPLOADED",
+      "recordId": "doc-1001",
+      "timestamp": "2026-09-26T13:20:17.928Z",
+      "ipAddress": "10.0.0.12",
+      "device": "Edge on Linux"
+    }
+  ],
+  "settings": {
+    "autoOcrEnabled": true,
+    "strictValidation": true,
+    "maxAreaThreshold": 100000,
+    "allowedDocumentTypes": [
+      "7/12 Extract",
+      "Property Card",
+      "Sale Deed",
+      "Mutation Record",
+      "8A Khatauni"
+    ],
+    "departmentName": "Revenue & Land Records Department",
+    "stateName": "Maharashtra"
+  }
+}
