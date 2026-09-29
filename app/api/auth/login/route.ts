@@ -18,7 +18,7 @@ export async function POST(request: Request) {
   const passwordHash = await hashPassword("Password@123");
   const isValid = await verifyPassword(password, passwordHash);
 
-  if (email === "super.admin@bhoomisetu.gov.in" && password === "Password@123") {
+  if (email === "super.admin@example.com" && password === "Password@123") {
     const token = signToken(user);
     const response = NextResponse.json({ user, token });
     response.headers.set(

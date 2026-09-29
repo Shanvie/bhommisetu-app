@@ -77,7 +77,7 @@ export default async function DocumentDetailPage({
           <div className="relative rounded-xl border border-slate-300 bg-gradient-to-b from-amber-50/70 via-slate-50 to-amber-50/40 p-5 font-serif text-slate-800 shadow-inner">
             <div className="border-b-2 border-slate-700 pb-3 text-center">
               <div className="text-[10px] tracking-widest uppercase font-bold text-slate-600">
-                GOVERNMENT OF MAHARASHTRA • REVENUE DEPARTMENT
+                SAMPLE DOCUMENT • NOT AN OFFICIAL GOVERNMENT RECORD
               </div>
               <div className="text-base font-bold text-slate-900 mt-1">
                 {document.documentType.toUpperCase()} (गाव नमुना ७/१२)

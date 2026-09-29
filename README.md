@@ -1,6 +1,6 @@
 # BhoomiSetu AI
 
-BhoomiSetu AI is a government-grade platform for intelligent land record digitization, automated OCR extraction, cadastral spatial validation, human-in-the-loop verification, and GIS analytics. Built for the Smart India Hackathon (SIH).
+BhoomiSetu is an independent prototype for exploring land-record service discovery and sample document workflows. It is not affiliated with any government and does not connect to official land-record databases. Official records must be obtained from the relevant state or Union Territory authority.
 
 ## Live Workflows & Functionality
 
@@ -23,8 +23,8 @@ BhoomiSetu AI is a government-grade platform for intelligent land record digitiz
    - Decision console: "Approve & Mark Verified", "Flag Inconsistency (Request Review)", and "Reject Record".
    - Commits changes immediately to the persistent store and writes an immutable audit log entry.
 
-4. **Official Cadastral Land Record Certificate (`/land-records/[id]`)**:
-   - Full Record of Rights (RoR) Certificate format.
+4. **Sample Land Record Summary (`/land-records/[id]`)**:
+   - Illustrative Record of Rights-style summary using demo data; not an official certificate.
    - Property summary (Property ID, Survey No, Gat No, Mutation No, Document No).
    - Ownership & Title breakdown with co-holders and relationship details.
    - Area metric conversions (Sq. Meters & Acres).
@@ -74,8 +74,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Demo Credentials (Password for all: `Password@123`)
 
-- **Verification Officer**: `verification.officer@bhoomisetu.gov.in`
-- **Government Officer**: `government.officer@bhoomisetu.gov.in`
-- **Super Administrator**: `super.admin@bhoomisetu.gov.in`
-- **Data Entry Operator**: `data.entry@bhoomisetu.gov.in`
+- **Verification Officer**: `verification.officer@example.com`
+- **Government Officer**: `government.officer@example.com`
+- **Super Administrator**: `super.admin@example.com`
+- **Data Entry Operator**: `data.entry@example.com`
 - **Citizen User**: `citizen@example.com`

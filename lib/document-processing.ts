@@ -53,7 +53,7 @@ export class OCRService {
     const area = context?.area || "1450";
 
     const simulatedText = [
-      `GOVERNMENT OF MAHARASHTRA - REVENUE DEPARTMENT`,
+      `SAMPLE DOCUMENT - NOT AN OFFICIAL GOVERNMENT RECORD`,
       `Document Type: ${docType}`,
       `District: ${district} | Taluka: ${district} City | Village: ${village}`,
       `Survey Number / Gat No: ${survey}`,
@@ -61,7 +61,7 @@ export class OCRService {
       `Total Area: ${area} Sq. Meters`,
       `Land Class: Agricultural (Jirayat / Bagayat)`,
       `Mutation Number: MUT-${Math.floor(1000 + Math.random() * 9000)}`,
-      `Verified against State GIS Cadastral Map 2026.`,
+      `Sample OCR output. Not verified against government records.`,
     ].join("\n");
 
     return {

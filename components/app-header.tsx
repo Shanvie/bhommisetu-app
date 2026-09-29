@@ -92,7 +92,7 @@ export function AppHeader({ onMenuToggle, title, subtitle }: AppHeaderProps) {
         ) : (
           <div className="hidden sm:block">
             <span className="text-xs font-semibold uppercase tracking-wider text-cyan-700">BhoomiSetu AI</span>
-            <div className="text-sm font-medium text-slate-700">Department of Revenue & Land Records</div>
+            <div className="text-sm font-medium text-slate-700">Sample records workspace</div>
           </div>
         )}
       </div>
@@ -154,10 +154,10 @@ export function AppHeader({ onMenuToggle, title, subtitle }: AppHeaderProps) {
               </div>
               <div className="space-y-1 py-1">
                 {[
-                  { name: "Super Admin", email: "super.admin@bhoomisetu.gov.in", desc: "Full administrative controls" },
-                  { name: "Government Officer", email: "government.officer@bhoomisetu.gov.in", desc: "Revenue & approvals" },
-                  { name: "Verification Officer", email: "verification.officer@bhoomisetu.gov.in", desc: "OCR validation desk" },
-                  { name: "Data Entry Operator", email: "data.entry@bhoomisetu.gov.in", desc: "Document uploads" },
+                  { name: "Super Admin (Demo)", email: "super.admin@example.com", desc: "Sample administrative controls" },
+                  { name: "Government Officer (Demo)", email: "government.officer@example.com", desc: "Sample approvals workflow" },
+                  { name: "Verification Officer (Demo)", email: "verification.officer@example.com", desc: "Sample review workflow" },
+                  { name: "Data Entry Operator (Demo)", email: "data.entry@example.com", desc: "Sample document uploads" },
                   { name: "Citizen User", email: "citizen@example.com", desc: "Public search portal" },
                 ].map((item) => (
                   <button

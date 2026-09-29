@@ -214,13 +214,13 @@ export default function UsersPage() {
               </div>
 
               <div>
-                <label className="block font-semibold text-slate-700 mb-1">Government Email</label>
+                <label className="block font-semibold text-slate-700 mb-1">Work Email</label>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder="name@bhoomisetu.gov.in"
+                  placeholder="name@example.com"
                   className="w-full rounded-xl border border-slate-300 px-3 py-2 text-slate-800 outline-none focus:border-cyan-600"
                 />
               </div>

@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BhoomiSetu AI",
-  description: "Intelligent Land Records. Verified Data. Better Governance.",
+  title: "BhoomiSetu | Land Services Directory",
+  description: "Find official Indian state and Union Territory land-record services.",
+  icons: {
+    icon: "/bhoomisetu-mark.svg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -40,6 +40,9 @@ export function AppShell({ children, title, subtitle }: AppShellProps) {
           title={title}
           subtitle={subtitle}
         />
+        <div className="border-b border-amber-300 bg-amber-50 px-4 py-2 text-xs font-medium text-amber-950 md:px-6 lg:px-8">
+          Prototype workspace: sample data only. Not connected to government land-record systems.
+        </div>
         <main className="flex-1 p-4 md:p-6 lg:p-8">{children}</main>
       </div>
     </div>

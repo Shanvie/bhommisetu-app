@@ -66,18 +66,18 @@ export default async function LandRecordDetailPage({
         </div>
       </div>
 
-      {/* Main Official Certificate Card */}
+      {/* Sample record summary */}
       <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
         {/* Certificate Government Header */}
         <div className="border-b-2 border-slate-900 pb-6 text-center">
           <div className="text-xs uppercase font-extrabold tracking-widest text-slate-500">
-            Government of Maharashtra • Department of Revenue
+            SAMPLE RECORD • NOT A GOVERNMENT CERTIFICATE
           </div>
           <h1 className="mt-1 text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Cadastral Land Record Certificate
+            Prototype Land Record Summary
           </h1>
           <p className="mt-1 text-xs text-slate-500">
-            Certified Record of Rights (RoR) • Form 7/12 & Property Card Register
+            Illustrative data only • Not an official Record of Rights
           </p>
 
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">

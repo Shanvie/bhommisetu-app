@@ -4,7 +4,7 @@
 
 - Next.js App Router
 - TypeScript for strong typing
-- Tailwind CSS for government-grade layouts
+- Tailwind CSS for a public-service-inspired interface; the app is an independent prototype, not a government service
 - Role-based navigation and authenticated screens
 
 ## Backend

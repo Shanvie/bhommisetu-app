@@ -4,7 +4,7 @@ export const defaultUsers: User[] = [
   {
     id: "usr-1001",
     name: "Aarav Nair",
-    email: "super.admin@bhoomisetu.gov.in",
+    email: "super.admin@example.com",
     role: "SUPER_ADMIN",
     department: "State IT Cell",
     isActive: true,
@@ -21,7 +21,7 @@ export const defaultUsers: User[] = [
   {
     id: "usr-1002",
     name: "Meera Patil",
-    email: "government.officer@bhoomisetu.gov.in",
+    email: "government.officer@example.com",
     role: "GOVERNMENT_OFFICER",
     department: "Revenue Department",
     isActive: true,
@@ -31,7 +31,7 @@ export const defaultUsers: User[] = [
   {
     id: "usr-1003",
     name: "Aniket Kulkarni",
-    email: "verification.officer@bhoomisetu.gov.in",
+    email: "verification.officer@example.com",
     role: "VERIFICATION_OFFICER",
     department: "Land Verification Cell",
     isActive: true,
@@ -41,7 +41,7 @@ export const defaultUsers: User[] = [
   {
     id: "usr-1004",
     name: "Sakshi Sharma",
-    email: "data.entry@bhoomisetu.gov.in",
+    email: "data.entry@example.com",
     role: "DATA_ENTRY_OPERATOR",
     department: "District Record Desk",
     isActive: true,

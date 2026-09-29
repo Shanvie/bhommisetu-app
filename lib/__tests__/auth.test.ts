@@ -4,7 +4,7 @@ import { defaultUsers } from "@/lib/demo-data";
 
 describe("authentication and RBAC", () => {
   it("finds a user by email", () => {
-    expect(findUserByEmail("verification.officer@bhoomisetu.gov.in")?.role).toBe("VERIFICATION_OFFICER");
+    expect(findUserByEmail("verification.officer@example.com")?.role).toBe("VERIFICATION_OFFICER");
   });
 
   it("grants role checks", () => {

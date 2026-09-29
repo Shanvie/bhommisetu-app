@@ -8,25 +8,25 @@ import { ShieldCheck, ArrowRight, Sparkles, UserCheck, Lock, Mail } from "lucide
 const DEMO_PERSONAS = [
   {
     role: "Verification Officer",
-    email: "verification.officer@bhoomisetu.gov.in",
+    email: "verification.officer@example.com",
     department: "Land Verification Cell",
     badge: "Recommended for Demo",
   },
   {
     role: "Government Officer",
-    email: "government.officer@bhoomisetu.gov.in",
+    email: "government.officer@example.com",
     department: "Revenue Department",
     badge: "Approvals & Reports",
   },
   {
     role: "Super Admin",
-    email: "super.admin@bhoomisetu.gov.in",
+    email: "super.admin@example.com",
     department: "State IT Cell",
     badge: "Full Control",
   },
   {
     role: "Data Entry Operator",
-    email: "data.entry@bhoomisetu.gov.in",
+    email: "data.entry@example.com",
     department: "District Record Desk",
     badge: "Uploads",
   },
@@ -40,7 +40,7 @@ const DEMO_PERSONAS = [
 
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState("verification.officer@bhoomisetu.gov.in");
+  const [email, setEmail] = useState("verification.officer@example.com");
   const [password, setPassword] = useState("Password@123");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -104,7 +104,7 @@ export default function LoginPage() {
                   <span className="text-cyan-400">Verified Data.</span>
                 </h1>
                 <p className="mt-4 text-sm text-slate-300 leading-relaxed">
-                  Government-grade prototype for automated OCR extraction, cadastral spatial validation, and human-in-the-loop verification.
+                  Independent prototype for sample document processing, record validation, and review workflows.
                 </p>
               </div>
 
@@ -142,7 +142,7 @@ export default function LoginPage() {
             </div>
 
             <div className="mt-8 pt-4 border-t border-slate-800/80 text-[11px] text-slate-500 flex justify-between">
-              <span>Department of Revenue & Land Records</span>
+              <span>Sample workspace • Not a government service</span>
               <Link href="/" className="text-cyan-400 hover:underline">
                 Portal Home
               </Link>
@@ -172,7 +172,7 @@ export default function LoginPage() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="w-full rounded-xl border border-slate-700 bg-slate-950 pl-10 pr-3 py-2.5 text-sm text-white placeholder-slate-500 outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition"
-                    placeholder="name@bhoomisetu.gov.in"
+                    placeholder="name@example.com"
                   />
                 </div>
               </div>

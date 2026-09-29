@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -75,15 +76,13 @@ export function Sidebar({ onClose, currentUser: initialUser, unreadCount = 0 }: 
       <div className="mb-6 flex items-center justify-between">
         <div>
           <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-tr from-cyan-600 to-emerald-400 text-xs font-bold text-slate-950 shadow-md">
-              BS
-            </div>
+            <Image src="/bhoomisetu-mark.svg" alt="" width={28} height={28} />
             <span className="text-base font-bold tracking-[0.18em] text-white">BHOOMISETU</span>
             <span className="rounded bg-cyan-500/20 px-1.5 py-0.5 text-[10px] font-semibold text-cyan-300 ring-1 ring-cyan-500/40">
               AI
             </span>
           </div>
-          <div className="mt-1.5 text-xs text-slate-400">Government of Maharashtra</div>
+          <div className="mt-1.5 text-xs text-slate-400">Independent prototype</div>
         </div>
         {onClose && (
           <button
