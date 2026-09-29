@@ -1,4 +1,4 @@
-name: Build and test
+name: Build, test, and publish
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
@@ -32,3 +32,38 @@ jobs:
 
       - name: Build application
         run: npm run build
+
+  publish:
+    name: Publish container to GitHub Packages
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and publish image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/shanvie/bhommisetu-app:latest
+            ghcr.io/shanvie/bhommisetu-app:${{ github.sha }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/Shanvie/bhommisetu-app
+            org.opencontainers.image.description=BhoomiSetu land services prototype

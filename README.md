@@ -72,6 +72,20 @@ npm run build
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Run the GitHub Package
+
+After the GitHub Actions workflow succeeds on `main`, it publishes `ghcr.io/shanvie/bhommisetu-app:latest`.
+
+```bash
+docker pull ghcr.io/shanvie/bhommisetu-app:latest
+docker run --rm -p 3000:3000 \
+   -e JWT_SECRET="$(openssl rand -hex 32)" \
+   -v bhoomisetu-data:/app/data \
+   ghcr.io/shanvie/bhommisetu-app:latest
+```
+
+Open [http://localhost:3000](http://localhost:3000). The container starts with sample data; mount the named volume to retain changes between restarts. The package is private by default; change its visibility in GitHub Packages settings if it should be publicly pullable.
+
 ## Demo Credentials (Password for all: `Password@123`)
 
 - **Verification Officer**: `verification.officer@example.com`
